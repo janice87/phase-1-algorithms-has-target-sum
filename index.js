@@ -1,13 +1,29 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i = 0; i < array.length; i++) {
+    for(let j = i + 1; j < array.length; j++) {
+      if(array[i] + array[j] === target) {
+        return true;
+       }     
+    }
+  }
+  return false;
 }
-
+//function hasTargetSum([1, 2, 5], 4)
 /* 
   Write the Big O time complexity of your function here
 */
 
 /* 
   Add your pseudocode here
+  we take 2 arguments, an array and target integer
+  should return TRUE if any pair of nums in the array adds to the target num
+  use nested for loop
+  ([1, 2, 5], 4) length is 3
+  i = 1 j = 2
+  i = 2 j = 5
+  i = 5
+
 */
 
 /*
